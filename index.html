@@ -222,6 +222,46 @@ padding: 20px;
       header h1 { font-size: 2.2rem; }
       section { padding: 50px 7%; }
     }
+
+
+	  /* Floating WhatsApp Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  color: #fff;
+  font-size: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 9999;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  animation: whatsappPulse 2s infinite;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.15);
+}
+
+/* Pulse Animation */
+@keyframes whatsappPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37,211,102,0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 18px rgba(37,211,102,0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37,211,102,0);
+  }
+}
+
   </style>
 </head>
 <body>
@@ -418,10 +458,27 @@ We focus on delivering warm hospitality with well-maintained rooms, modern ameni
 </script>
 
 	
+<a href="https://wa.me/919025016340" 
+   class="whatsapp-float" 
+   target="_blank" 
+   aria-label="Chat on WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+     width="30" alt="WhatsApp">
+
+</a>
+<a href="https://wa.me/919025016340" 
+   class="whatsapp-float" 
+   target="_blank" 
+   aria-label="Chat on WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+     width="30" alt="WhatsApp">
+
+</a>
 </body>
 </html>
 
 </html>
+
 
 
 
