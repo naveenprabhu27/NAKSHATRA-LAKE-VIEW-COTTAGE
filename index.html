@@ -329,8 +329,20 @@ We focus on delivering warm hospitality with well-maintained rooms, modern ameni
   revealOnScroll(); // initial load
 </script>
 
+
+ <script>
+  window.addEventListener("scroll", () => {
+    const header = document.querySelector("header");
+    let scrollPos = window.scrollY;
+
+    header.style.backgroundPositionY = scrollPos * 0.4 + "px";
+  });
+</script>
+
+	
 </body>
 </html>
 
 </html>
+
 
