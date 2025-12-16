@@ -383,6 +383,69 @@ body.dark .btn {
   to { opacity: 1; }
 }
 
+	  /* Gallery Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+}
+
+/* Lightbox */
+#lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease;
+}
+
+#lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 85vh;
+  border-radius: 15px;
+  animation: zoomIn 0.4s ease;
+}
+
+/* Close button */
+.lightbox-close {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  font-size: 32px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Zoom animation */
+@keyframes zoomIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
   </style>
 </head>
 <body>
@@ -433,12 +496,19 @@ We focus on delivering warm hospitality with well-maintained rooms, modern ameni
   </div>
 
 
-    <div class="room">
-      <img src="4.jpg" />
-      <img src="bed.jpg" />
-      <img src="6.jpg" />
-      <img src="7.jpg" />
-	  
+   <section id="gallery">
+  <div class="section-title">
+    <h2>Gallery</h2>
+  </div>
+
+  <div class="gallery-grid">
+    <img src="4.jpg" onclick="openLightbox(this.src)">
+    <img src="bed.jpg" onclick="openLightbox(this.src)">
+    <img src="6.jpg" onclick="openLightbox(this.src)">
+    <img src="7.jpg" onclick="openLightbox(this.src)">
+  </div>
+</section>
+
 	  
       <div class="room-content">
         <h3>Non-AC Room</h3>
@@ -632,11 +702,33 @@ We focus on delivering warm hospitality with well-maintained rooms, modern ameni
     }, 800);
   });
 </script>
+<div id="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close">&times;</span>
+  <img id="lightbox-img">
+</div>
+ <script>
+  function openLightbox(src) {
+    document.getElementById("lightbox-img").src = src;
+    document.getElementById("lightbox").classList.add("active");
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").classList.remove("active");
+  }
+
+  // Close on ESC key
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape") {
+      closeLightbox();
+    }
+  });
+</script>
 
 </body>
 </html>
 
 </html>
+
 
 
 
