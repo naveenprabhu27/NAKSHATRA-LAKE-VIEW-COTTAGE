@@ -309,7 +309,28 @@ We focus on delivering warm hospitality with well-maintained rooms, modern ameni
   <p>© 2025 NAKSHATRA LAKE VIEW COTTAGE. Designed with ❤</p>
 </footer>
 
+
+	<script>
+  function revealOnScroll() {
+    const reveals = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
+
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const elementTop = reveals[i].getBoundingClientRect().top;
+      const elementVisible = 120;
+
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      }
+    }
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll(); // initial load
+</script>
+
 </body>
 </html>
 
 </html>
+
