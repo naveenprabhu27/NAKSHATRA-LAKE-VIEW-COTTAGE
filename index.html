@@ -318,6 +318,70 @@ footer,
 body.dark .btn {
   background: linear-gradient(135deg, #ff6a00, #FC0B03);
 }
+  /* Page Loader */
+#page-loader {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+/* Hide loader */
+#page-loader.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Loader Content */
+.loader-content {
+  text-align: center;
+  color: #fff;
+}
+
+.loader-content h1 {
+  font-size: 2.8rem;
+  letter-spacing: 6px;
+  margin-bottom: 10px;
+  animation: textFade 1.5s ease infinite alternate;
+}
+
+.loader-content span {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+/* Loading line */
+.loader-line {
+  width: 160px;
+  height: 3px;
+  background: #222;
+  margin: 25px auto 0;
+  overflow: hidden;
+}
+
+.loader-line::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 40%;
+  background: linear-gradient(90deg, #FC0B03, #ff6a00);
+  animation: loadingLine 1.4s infinite ease-in-out;
+}
+
+/* Animations */
+@keyframes loadingLine {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(350%); }
+}
+
+@keyframes textFade {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
 
   </style>
 </head>
@@ -331,6 +395,13 @@ body.dark .btn {
   <p>Premium Comfort • Affordable Price • Best Service • Kodaikanal</p>
   <a href="https://wa.me/919025016340" class="btn">Book on WhatsApp</a>
 </header>
+ <div id="page-loader">
+  <div class="loader-content">
+    <h1>NAKSHATRA</h1>
+    <span>Lake View Cottage</span>
+    <div class="loader-line"></div>
+  </div>
+</div>
 
 <!-- NAV -->
 <nav>
@@ -552,10 +623,21 @@ We focus on delivering warm hospitality with well-maintained rooms, modern ameni
 </script>
 
 
+
+	<script>
+  window.addEventListener("load", () => {
+    const loader = document.getElementById("page-loader");
+    setTimeout(() => {
+      loader.classList.add("hide");
+    }, 800);
+  });
+</script>
+
 </body>
 </html>
 
 </html>
+
 
 
 
