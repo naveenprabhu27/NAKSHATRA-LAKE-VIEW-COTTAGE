@@ -564,26 +564,37 @@ We focus on delivering warm hospitality with well-maintained rooms, modern ameni
 
   <h4>For Booking Now</h4>
 
-  <a href="tel:+919677823465" class="call-soft">📞 Call Now</a>
-
-</div>
+ <a href="tel:+919677823465" class="call-transition">📞 Call Now</a>
 
 <style>
-.call-soft{
+.call-transition{
   background:#28a745;
-  color:white;
-  padding:15px 28px;
+  color:#fff;
+  padding:15px 32px;
   font-size:18px;
+  font-weight:600;
   border-radius:50px;
   text-decoration:none;
-  animation:softpulse 2s infinite;
   display:inline-block;
+
+  /* Smooth transition */
+  transition:
+    background-color 0.3s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-@keyframes softpulse{
-  0%{box-shadow:0 0 0 0 rgba(40,167,69,0.4);}
-  70%{box-shadow:0 0 0 12px rgba(40,167,69,0);}
-  100%{box-shadow:0 0 0 0 rgba(40,167,69,0);}
+/* Hover (desktop) */
+.call-transition:hover{
+  background:#218838;
+  transform:translateY(-3px);
+  box-shadow:0 10px 22px rgba(0,0,0,0.25);
+}
+
+/* Tap feedback (mobile) */
+.call-transition:active{
+  transform:scale(0.96);
+  box-shadow:0 5px 12px rgba(0,0,0,0.2);
 }
 </style>
 
@@ -769,6 +780,7 @@ We focus on delivering warm hospitality with well-maintained rooms, modern ameni
 </html>
 
 </html>
+
 
 
 
