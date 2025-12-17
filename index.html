@@ -464,6 +464,50 @@ body.dark footer {
   border-top: 1px solid rgba(255,255,255,0.1);
 }
 
+.map-3d{
+  max-width:1000px;
+  margin:40px auto;
+  border-radius:18px;
+  overflow:hidden;
+
+  /* 3D setup */
+  perspective:1200px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.map-3d iframe{
+  width:100%;
+  height:400px;
+  border:0;
+  transform: translateZ(0);
+  transition: transform 0.4s ease;
+}
+
+/* Hover – Desktop */
+.map-3d:hover{
+  transform: rotateX(6deg) rotateY(-6deg) translateY(-10px);
+  box-shadow:0 25px 50px rgba(0,0,0,0.35);
+}
+
+.map-3d:hover iframe{
+  transform: scale(1.05);
+}
+
+/* Mobile tap feedback */
+.map-3d:active{
+  transform: scale(0.98);
+}
+
+	  .map-3d{
+  opacity:0;
+  transform: translateY(40px) scale(0.96);
+}
+
+.map-3d.show{
+  opacity:1;
+  transform: translateY(0) scale(1);
+  transition: all 0.6s ease;
+}
 
   </style>
 </head>
@@ -606,17 +650,15 @@ We focus on delivering warm hospitality with well-maintained rooms, modern ameni
     <h2>Our Location</h2>
   </div>
 
-  <div style="max-width:1000px;margin:auto;">
-    <iframe
-      src="https://www.google.com/maps?q=Nakshatra+Lake+View+Cottage&output=embed"
-      width="100%"
-      height="400"
-      style="border:0;border-radius:15px;"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </div>
+  <div class="map-3d">
+  <iframe
+    src="https://www.google.com/maps?q=Nakshatra+Lake+View+Cottage&output=embed"
+    loading="lazy"
+    allowfullscreen
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
 </section>
 
   
@@ -775,11 +817,21 @@ We focus on delivering warm hospitality with well-maintained rooms, modern ameni
     }
   });
 </script>
+ <script>
+const map = document.querySelector('.map-3d');
+window.addEventListener('scroll', () => {
+  const rect = map.getBoundingClientRect();
+  if(rect.top < window.innerHeight - 120){
+    map.classList.add('show');
+  }
+});
+</script>
 
 </body>
 </html>
 
 </html>
+
 
 
 
