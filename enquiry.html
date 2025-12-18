@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking Slot</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<style>
+body{
+  font-family:Poppins,sans-serif;
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  margin:0;
+}
+.card{
+  background:#fff;
+  padding:30px;
+  border-radius:15px;
+  width:100%;
+  max-width:400px;
+}
+h2{text-align:center; margin-bottom:20px;}
+input, select, button{
+  width:100%;
+  padding:12px;
+  margin-top:10px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-size:14px;
+}
+button{
+  background:#c89b3c;
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
+  border:none;
+}
+button:hover{background:#b68a2f;}
+</style>
+</head>
+<body>
+
+<div class="card">
+<h2>Thanks For Choosing us</h2>
+
+<form id="bookingForm">
+  <input type="text" id="name" placeholder="Full Name" required>
+  <input type="tel" id="phone" placeholder="Phone Number" required>
+  <input type="date" id="checkin" required>
+  <input type="date" id="checkout" required>
+  <select id="guests">
+    <option>1 Guest</option>
+    <option>2 Guests</option>
+    <option>3 Guests</option>
+    <option>4 Guests</option>
+    <option>Up to 12 Guests</option>
+  </select>
+  <button type="submit">Send WhatsApp</button>
+</form>
+</div>
+
+<script>
+document.getElementById("bookingForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  var name = document.getElementById("name").value.trim();
+  var phone = document.getElementById("phone").value.trim();
+  var checkin = document.getElementById("checkin").value;
+  var checkout = document.getElementById("checkout").value;
+  var guests = document.getElementById("guests").value;
+
+  // WhatsApp message in Tamil / English
+  var message =
+    "📌 Booking Enquiry\n" +
+    "Name: " + name + "\n" +
+    "Phone: " + phone + "\n" +
+    "Check-In: " + checkin + "\n" +
+    "Check-Out: " + checkout + "\n" +
+    "Guests: " + guests;
+
+  // WhatsApp direct link (no + sign, use country code)
+  var whatsappURL = "https://api.whatsapp.com/send?phone=919025016340&text=" + encodeURIComponent(message);
+
+  // Redirect to WhatsApp
+  window.location.href = whatsappURL;
+});
+</script>
+
+</body>
+</html>
