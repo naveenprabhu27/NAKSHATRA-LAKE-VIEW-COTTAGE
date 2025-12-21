@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Travel Booking</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+}
+
+.booking-section{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:30px;
+}
+
+.booking-card{
+  background:#fff;
+  max-width:1000px;
+  width:100%;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 30px 60px rgba(0,0,0,0.25);
+}
+
+.booking-info{
+  background:url('cover.jpg') center/cover;
+  color:#000000;
+  padding:40px;
+}
+
+.booking-info h2{
+  font-size:32px;
+  margin-bottom:15px;
+}
+
+.booking-info p{
+  font-size:16px;
+  line-height:1.6;
+}
+
+.booking-form{
+  padding:40px;
+}
+
+.booking-form h3{
+  font-size:26px;
+  margin-bottom:25px;
+  color:#222;
+}
+
+.form-group{
+  margin-bottom:18px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+  width:100%;
+  padding:14px;
+  border-radius:10px;
+  border:1px solid #ddd;
+  font-size:15px;
+}
+
+.form-group textarea{
+  resize:none;
+  height:90px;
+}
+
+.book-btn{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:12px;
+  background:#2c5364;
+  color:#fff;
+  font-size:16px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.book-btn:hover{
+  background:#203a43;
+}
+
+@media(max-width:768px){
+  .booking-card{
+    grid-template-columns:1fr;
+  }
+  .booking-info{
+    min-height:220px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="booking-section">
+  <div class="booking-card">
+
+    <!-- LEFT INFO -->
+    <div class="booking-info">
+      <h2>SRI SAI SAKTHI TRAVELS</h2>
+      <h3>Book Your Ride</h3>
+      <p>
+        Comfortable, safe & reliable car travel services.<br>
+        Transparent pricing & professional drivers.
+      </p>
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="booking-form">
+      <h3>Booking Details</h3>
+
+      <div class="form-group">
+        <input type="text" id="name" placeholder="Full Name" required>
+      </div>
+
+      <div class="form-group">
+        <input type="tel" id="phone" placeholder="Mobile Number" required>
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="pickup" placeholder="Pickup Location" required>
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="drop" placeholder="Drop Location" required>
+      </div>
+
+      <div class="form-group">
+        <input type="date" id="date" required>
+      </div>
+
+      <div class="form-group">
+        <select id="car">
+          <option value="">Select Car Type</option>
+          <option>Sedan</option>
+          <option>SUV</option>
+          <option>Tempo Traveller</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <textarea id="message" placeholder="Additional Message (Optional)"></textarea>
+      </div>
+
+      <button class="book-btn" onclick="sendWhatsApp()">Confirm Booking</button>
+
+    </div>
+
+  </div>
+</section>
+
+<script>
+function sendWhatsApp(){
+  let name=document.getElementById("name").value;
+  let phone=document.getElementById("phone").value;
+  let pickup=document.getElementById("pickup").value;
+  let drop=document.getElementById("drop").value;
+  let date=document.getElementById("date").value;
+  let car=document.getElementById("car").value;
+  let msg=document.getElementById("message").value;
+
+  let text =
+`Car Travel Booking Request
+Name: ${name}
+Mobile: ${phone}
+Pickup: ${pickup}
+Drop: ${drop}
+Date: ${date}
+Car Type: ${car}
+Message: ${msg}`;
+
+  let url = "https://wa.me/917826086180?text=" + encodeURIComponent(text);
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
