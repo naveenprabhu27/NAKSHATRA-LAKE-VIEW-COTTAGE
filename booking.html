@@ -101,11 +101,53 @@ body{
   .booking-info{
     min-height:220px;
   }
+
+
+.page-wrapper{
+  opacity:0;
+  transform:translateY(20px);
+  animation:pageEnter 0.8s ease forwards;
 }
+
+@keyframes pageEnter{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.fade-out{
+  opacity:0;
+  transform:translateY(-20px);
+  transition:opacity 0.4s ease, transform 0.4s ease;
+}
+
+@keyframes pageEnter{
+  from{ opacity:0; transform:scale(0.96); }
+  to{ opacity:1; transform:scale(1); }
+}
+@keyframes pageEnter{
+  from{ opacity:0; transform:translateX(40px); }
+  to{ opacity:1; transform:translateX(0); }
+}
+
+
 </style>
 </head>
 
 <body>
+
+
+<body>
+  <div class="page-wrapper">
+    <!-- All page content here -->
+  </div>
+</body>
+
 
 <section class="booking-section">
   <div class="booking-card">
@@ -147,8 +189,9 @@ body{
       <div class="form-group">
         <select id="car">
           <option value="">Select Car Type</option>
-          <option>INNOVA</option>
-          <option>SHIFT</optio>
+          <option>Sedan</option>
+          <option>SUV</option>
+          <option>Tempo Traveller</option>
         </select>
       </div>
 
@@ -187,8 +230,23 @@ Message: ${msg}`;
   window.open(url, "_blank");
 }
 </script>
+<script>
+document.querySelectorAll("a").forEach(link=>{
+  if(link.hostname === window.location.hostname){
+    link.addEventListener("click", function(e){
+      e.preventDefault();
+      const target = this.href;
+
+      document.querySelector(".page-wrapper")
+        .classList.add("fade-out");
+
+      setTimeout(()=>{
+        window.location.href = target;
+      },400);
+    });
+  }
+});
+</script>
 
 </body>
 </html>
-
-
