@@ -1,568 +1,414 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QB1QJ7SL3M"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-QB1QJ7SL3M');
-</script>
-	<meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NAKSHATRA LAKE VIEW COTTAGE</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NAKSHATRA COTTAGE</title>
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QB1QJ7SL3M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QB1QJ7SL3M');
+  </script>
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #f8f9fa;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    /* Header */
-header {
-/* Use your customized local image */
-background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('outlook.jpg');
-background-size: cover;
-background-position: center;
-height: 80vh;
-color: #fff;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-text-align: center;
-padding: 20px;
+<style>
+/* ================= RESET ================= */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f8f9fa;
+  color:#333;
+  line-height:1.6;
 }
 
-    header h1 { font-size: 3rem; margin-bottom: 10px; }
-    header p { font-size: 1.2rem; margin-bottom: 20px; }
 
-   /* Cinematic Header */
-.cinematic-header {
-  position: relative;
-  height: 90vh;
+:root{
+  --gold:#c59d5f;
+  --glass:rgba(255,255,255,0.06);
+}
+#google-reviews div{
+  background:rgba(255,255,255,0.08) !important;
+  border:1px solid rgba(197,157,95,0.25);
+  box-shadow:0 15px 35px rgba(0,0,0,.45);
+}
+.gallery-grid img{
+  border-radius:18px;
+  box-shadow:0 12px 35px rgba(0,0,0,.6);
+}
+.gallery-grid img:hover{
+  transform:scale(1.06);
+  box-shadow:0 25px 60px rgba(197,157,95,.35);
+}
+nav{
+  background:rgba(2,6,23,.85);
+  backdrop-filter:blur(12px);
+}
+
+footer{
+  background:linear-gradient(180deg,#020617,#000);
+}
+
+/* ===== LUXURY NIGHT LAKE BACKGROUND ===== */
+body{
+  font-family:'Poppins',sans-serif;
   background:
-    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-    url('outlook.jpg');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #fff;
-  overflow: hidden;
-  animation: bgZoom 8s ease forwards;
+    radial-gradient(circle at top, rgba(255,255,255,0.05), transparent 40%),
+    linear-gradient(180deg,#020617,#0b1220 45%,#020617);
+  color:#e5e7eb;
+  line-height:1.7;
 }
 
-/* Dark cinematic overlay */
-.cinematic-header::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at center, rgba(0,0,0,0.2), rgba(0,0,0,0.8));
+section{
+  background:var(--glass);
+  backdrop-filter:blur(10px);
+  border-radius:22px;
+  padding:60px 8%;
+  margin-bottom:60px;
+  box-shadow:
+    0 20px 40px rgba(0,0,0,.45),
+    inset 0 1px 0 rgba(255,255,255,.06);
 }
 
-/* Keep content above overlay */
-.cinematic-header * {
-  position: relative;
-  z-index: 2;
+/* ================= HERO ================= */
+.cinematic-header{
+  min-height:90vh;
+  background:
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url('outlook.jpg') center/cover no-repeat;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:#fff;
+  padding:20px;
+}
+.cinematic-header h1{font-size:clamp(28px,5vw,52px);}
+.cinematic-header h2{letter-spacing:3px;margin:10px 0;}
+.cinematic-header p{max-width:850px;margin:6px auto;}
+
+/* ================= NAV ================= */
+nav{
+  position:sticky;
+  top:0;
+  background:#fff;
+  z-index:1000;
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+nav ul{
+  list-style:none;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  padding:12px;
+}
+nav li{margin:8px 14px;}
+nav a{
+  text-decoration:none;
+  color:#333;
+  font-weight:500;
+}
+nav a:hover{color:#c59d5f;}
+
+/* ================= SECTION ================= */
+section{
+  padding:60px 8%;
+}
+.section-title{
+  text-align:center;
+  margin-bottom:40px;
+}
+.section-title h2{font-size:clamp(22px,4vw,36px);}
+
+/* ================= ABOUT ================= */
+.about p{
+  max-width:900px;
+  margin:auto;
+  text-align:center;
 }
 
-/* Background slow zoom */
-@keyframes bgZoom {
-  from { transform: scale(1.15); }
-  to   { transform: scale(1); }
+/* ================= GALLERY ================= */
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
+.gallery-grid img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:14px;
+  cursor:pointer;
+  transition:.3s;
+}
+.gallery-grid img:hover{
+  transform:scale(1.05);
+  box-shadow:0 12px 25px rgba(0,0,0,.3);
 }
 
-/* Text reveal animation */
-.cinematic-header h1,
-.cinematic-header h2,
-.cinematic-header p,
-.cinematic-header .btn {
-  opacity: 0;
-  transform: translateY(40px);
-  animation: textReveal 1.2s ease forwards;
+/* ================= MAP ================= */
+.map-3d{
+  max-width:1000px;
+  margin:auto;
+  border-radius:16px;
+  overflow:hidden;
+}
+.map-3d iframe{
+  width:100%;
+  height:380px;
+  border:0;
 }
 
-.cinematic-header h1 { animation-delay: 0.3s; font-size: 3.2rem; }
-.cinematic-header h2 { animation-delay: 0.6s; letter-spacing: 4px; }
-.cinematic-header p  { animation-delay: 0.9s; max-width: 800px; }
-.cinematic-header .btn { animation-delay: 1.3s; }
+/* ================= BUTTON ================= */
+.btn{
+  display:inline-block;
+  background:linear-gradient(135deg,#FC0B03,#ff6a00);
+  color:#fff;
+  padding:14px 34px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:600;
+  transition:.3s;
+}
+.btn:hover{transform:scale(1.08);}
 
-@keyframes textReveal {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+/* Floating Button */
+#wa-button{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:60px;
+  height:60px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  cursor:pointer;
+  z-index:9999;
+  box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+#wa-button img{width:32px}
+
+/* Chat Box */
+#wa-chat{
+  position:fixed;
+  bottom:90px;
+  right:20px;
+  width:320px;
+  background:#fff;
+  border-radius:16px;
+  box-shadow:0 15px 40px rgba(0,0,0,.25);
+  display:none;
+  flex-direction:column;
+  overflow:hidden;
+  z-index:9999;
+  animation:fadeUp .3s ease;
+}
+
+/* Header */
+.wa-header{
+  background:#075E54;
+  color:#fff;
+  padding:14px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.wa-header img{width:30px}
+.wa-header span{font-size:12px;opacity:.8}
+.wa-close{
+  margin-left:auto;
+  font-size:22px;
+  cursor:pointer;
+}
+
+/* Body */
+.wa-body{
+  padding:15px;
+  background:#ECE5DD;
+  font-size:14px;
+}
+.wa-body p{
+  background:#fff;
+  padding:10px;
+  border-radius:10px;
+  margin-bottom:8px;
+}
+
+/* Footer */
+.wa-footer{
+  padding:12px;
+  text-align:center;
+}
+.wa-footer a{
+  display:block;
+  background:#25D366;
+  color:#fff;
+  padding:12px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* Animation */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* Mobile */
+@media(max-width:480px){
+  #wa-chat{
+    right:10px;
+    width:90%;
   }
 }
-
-
-	  
-    .btn {
-  background: linear-gradient(135deg, #FC0B03, #ff6a00);
-  color: #fff;
-  padding: 14px 34px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 1px;
-  transition: all 0.4s ease;
+#wa-status{
+  font-size:12px;
+}
+.wa-online{
+  color:#b9fbc0;
+}
+.wa-offline{
+  color:#ffd6a5;
 }
 
 
-     	  cinematic-header .btn {
-  animation: pulse 1s infinite;
-  }
-
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(255,250,205);}
-  70% { box-shadow: 0 0 0 5px rgba(255,255,224);}
-  100% { box-shadow: 0 0 0 0 rgba(255,215,0);}
-}	  
-	  
-    .btn:hover {
-  transform: scale(1.08);
-  box-shadow: 0 15px 35px rgba(255,106,0,0.6);
+/* ================= FOOTER ================= */
+footer{
+  background:#020617;
+  padding:40px 8%;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+}
+footer h4{color:#fff;margin-bottom:12px;}
+footer p,footer a{
+  color:#cbd5f5;
+  font-size:14px;
+  text-decoration:none;
+}
+.copyright{
+  text-align:center;
+  padding:15px;
+  background:#020617;
+  color:#94a3b8;
+  font-size:13px;
 }
 
-    /* Navigation */
-    nav {
-      position: sticky;
-      top: 0;
-      background: #fff;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-      z-index: 1000;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      padding: 15px;
-    }
-
-    nav ul li { margin: 0 18px; }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-    }
-
-    nav ul li a:hover { color: #c59d5f; }
-
-    /* Sections */
-    section {
-      padding: 70px 12%;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
-    .section-title h2 { font-size: 2.2rem; }
-
-    /* About */
-    .about p { max-width: 900px; margin: auto; text-align: center; }
-
-    /* Rooms */
-    .rooms {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-    }
-
-    .room {
-      background: FF1F2E;
-      border-radius: 15px;
-      box-shadow: 0 5px 25px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.3s;
-    }
-
-    .room:hover { transform: translateY(-8px); }
-
-    .room img { width: 100%; height: 200px; object-fit: cover; }
-
-    .room-content { padding: 20px; }
-
-    .room-content h3 { margin-bottom: 10px; }
-
-   
-
-    th, td {
-      padding: 15px;
-      border-bottom: 1px solid #ddd;
-      text-align: center;
-    }
-
-    th { background: #c59d5f; color: #fff; }
-
-    /* Contact */
-    .contact-info { text-align: bottom;
-	
-                     
-                     
-  
-   }
-
-    /* Footer */
-    footer {
-      background: #111;
-      color: #aaa;
-      text-align: center;
-      padding: 25px;
-    }
-
-    /* Responsive */
-    @media(max-width: 768px) {
-      header h1 { font-size: 2.2rem; }
-      section { padding: 50px 7%; }
-    }
-
-
-	  /* Floating WhatsApp Button */
-.whatsapp-float {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  width: 60px;
-  height: 60px;
-  background: #25D366;
-  color: #fff;
-  font-size: 28px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  z-index: 9999;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-  animation: whatsappPulse 2s infinite;
-  transition: transform 0.3s ease;
+/* ================= MOBILE ================= */
+@media(max-width:600px){
+  section{padding:45px 6%;}
+  nav ul{justify-content:space-around;}
 }
 
-.whatsapp-float:hover {
-  transform: scale(1.15);
+/* PAGE LOADER */
+#page-loader{
+  position:fixed;
+  inset:0;
+  background:#020617;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:10000;
+  transition:opacity .8s ease, visibility .8s ease;
 }
 
-/* Pulse Animation */
-@keyframes whatsappPulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(37,211,102,0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 18px rgba(37,211,102,0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(37,211,102,0);
-  }
-}
-
-
-	  /* Toggle Button */
-.theme-toggle {
-  position: absolute;
-  right: 20px;
-  top: 12px;
-  background: transparent;
-  border: none;
-  font-size: 22px;
-  cursor: pointer;
-}
-
-/* Default Light Theme */
-:root {
-  --bg: #ffffff;
-  --text: #333;
-  --card: #ffffff;
-  --nav: #ffffff;
-}
-
-/* Dark Theme */
-body.dark {
-  --bg: #0e0e0e;
-  --text: #eaeaea;
-  --card: #1a1a1a;
-  --nav: #111;
-}
-
-/* Apply theme */
-body {
-  background: var(--bg);
-  color: var(--text);
-  transition: background 0.4s ease, color 0.4s ease;
-}
-
-nav {
-  background: var(--nav);
-}
-
-.room,
-section,
-footer,
-#google-reviews div {
-  background: var(--card);
-  transition: background 0.4s ease;
-}
-
-/* Header stays cinematic */
-.cinematic-header {
-  color: #fff;
-}
- body.dark a { color: #c59d5f; }
-
-body.dark .btn {
-  background: linear-gradient(135deg, #ff6a00, #FC0B03);
-}
-  /* Page Loader */
-#page-loader {
-  position: fixed;
-  inset: 0;
-  background: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10000;
-  transition: opacity 0.8s ease, visibility 0.8s ease;
-}
-
-/* Hide loader */
-#page-loader.hide {
-  opacity: 0;
-  visibility: hidden;
+/* Hide Loader */
+#page-loader.hide{
+  opacity:0;
+  visibility:hidden;
 }
 
 /* Loader Content */
-.loader-content {
-  text-align: center;
-  color: #fff;
+.loader-box{
+  text-align:center;
+  color:#fff;
+}
+.loader-box h1{
+  font-size:clamp(28px,6vw,48px);
+  letter-spacing:6px;
+  animation:fadeText 1.5s infinite alternate;
+}
+.loader-box p{
+  opacity:.7;
+  margin-top:5px;
+  font-size:14px;
 }
 
-.loader-content h1 {
-  font-size: 2.8rem;
-  letter-spacing: 6px;
-  margin-bottom: 10px;
-  animation: textFade 1.5s ease infinite alternate;
+/* Loading Line */
+.loader-line{
+  width:160px;
+  height:3px;
+  background:#111;
+  margin:25px auto 0;
+  overflow:hidden;
 }
-
-.loader-content span {
-  font-size: 1rem;
-  opacity: 0.7;
-}
-
-/* Loading line */
-.loader-line {
-  width: 160px;
-  height: 3px;
-  background: #222;
-  margin: 25px auto 0;
-  overflow: hidden;
-}
-
-.loader-line::before {
-  content: "";
-  display: block;
-  height: 100%;
-  width: 40%;
-  background: linear-gradient(90deg, #FC0B03, #ff6a00);
-  animation: loadingLine 1.4s infinite ease-in-out;
+.loader-line::before{
+  content:"";
+  display:block;
+  width:40%;
+  height:100%;
+  background:linear-gradient(90deg,#FC0B03,#ff6a00);
+  animation:loading 1.4s infinite ease-in-out;
 }
 
 /* Animations */
-@keyframes loadingLine {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(350%); }
+@keyframes loading{
+  from{transform:translateX(-100%)}
+  to{transform:translateX(350%)}
+}
+@keyframes fadeText{
+  from{opacity:.4}
+  to{opacity:1}
 }
 
-@keyframes textFade {
-  from { opacity: 0.4; }
-  to { opacity: 1; }
+/* Mobile tweak */
+@media(max-width:600px){
+  .loader-line{width:120px}
 }
-
-	  /* Gallery Grid */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
+/* ===== SPIDER CURSOR CANVAS ===== */
+#spiderCanvas{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:9998;
 }
-
-.gallery-grid img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 14px;
-  cursor: pointer;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.gallery-grid img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
-}
-
-/* Lightbox */
-#lightbox {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10000;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.4s ease;
-}
-
-#lightbox.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-#lightbox img {
-  max-width: 90%;
-  max-height: 85vh;
-  border-radius: 15px;
-  animation: zoomIn 0.4s ease;
-}
-
-/* Close button */
-.lightbox-close {
-  position: absolute;
-  top: 25px;
-  right: 30px;
-  font-size: 32px;
-  color: #fff;
-  cursor: pointer;
-}
-
-/* Zoom animation */
-@keyframes zoomIn {
-  from { transform: scale(0.7); opacity: 0; }
-  to   { transform: scale(1); opacity: 1; }
-}
-
-	  footer {
-  border-top: 1px solid rgba(0,0,0,0.1);
-}
-
-body.dark footer {
-  border-top: 1px solid rgba(255,255,255,0.1);
-}
-
-.map-3d{
-  max-width:1000px;
-  margin:40px auto;
-  border-radius:18px;
-  overflow:hidden;
-
-  /* 3D setup */
-  perspective:1200px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.map-3d iframe{
-  width:100%;
-  height:400px;
-  border:0;
-  transform: translateZ(0);
-  transition: transform 0.4s ease;
-}
-
-/* Hover – Desktop */
-.map-3d:hover{
-  transform: rotateX(6deg) rotateY(-6deg) translateY(-10px);
-  box-shadow:0 25px 50px rgba(0,0,0,0.35);
-}
-
-.map-3d:hover iframe{
-  transform: scale(1.05);
-}
-
-/* Mobile tap feedback */
-.map-3d:active{
-  transform: scale(0.98);
-}
-
-	  .map-3d{
-  opacity:0;
-  transform: translateY(40px) scale(0.96);
-}
-
-.map-3d.show{
-  opacity:1;
-  transform: translateY(0) scale(1);
-  transition: all 0.6s ease;
-}
-/* ===== FOOTER ===== */
-    footer{
-      background:#020617;
-      padding:40px 8%;
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:30px;
-    }
-    footer h4{color:var(--gold);margin-bottom:15px;}
-    footer p,footer a{color:#cbd5f5;font-size:14px;text-decoration:none;}
-
-    .copyright{
-      text-align:center;
-      padding:15px;
-      background:#020617;
-      color:#94a3b8;
-      font-size:13px;
-    }
-
-    /* ===== RESPONSIVE ===== */
-    @media(max-width:900px){
-      .search-box{grid-template-columns:1fr 1fr;}
-    }
-    @media(max-width:600px){
-      .hero-content h2{font-size:34px;}
-      .search-box{grid-template-columns:1fr;}
-    }
-
-  </style>
+</style>
 </head>
+
 <body>
+<!-- PAGE LOADER -->
+<div id="page-loader">
+  <div class="loader-box">
+    <h1>NAKSHATRA</h1>
+    <p>Lake View Cottage</p>
+    <div class="loader-line"></div>
+  </div>
+</div>
 
 <!-- HERO -->
 <header class="cinematic-header">
   <h1>Welcome to Nakshatra Lake View Cottage</h1>
   <h2>INDIVIDUAL VILLA</h2>
-  <p>📍 Located in the heart of the city with easy access to Transport, Tourist Places, and Adventure areas</p>
+  <p>📍 Located in the heart of the city with easy access to Transport, Tourist Places & Adventure areas</p>
   <p>Premium Comfort • Affordable Price • Best Service • Kodaikanal</p>
-  
 </header>
- <div id="page-loader">
-  <div class="loader-content">
-    <h1>NAKSHATRA</h1>
-    <span>Lake View Cottage</span>
-    <div class="loader-line"></div>
-  </div>
-</div>
 
 <!-- NAV -->
 <nav>
   <ul>
     <li><a href="#about">About</a></li>
     <li><a href="#rooms">Rooms</a></li>
-    <li><a href="#footer">Contact</a></li>
-	<li><a href="main.html">Travel</a></li>  
+    <li><a href="#map">Location</a></li>
+    <li><a href="main.html">Travel</a></li>
   </ul>
 </nav>
 
@@ -572,24 +418,16 @@ body.dark footer {
     <h2>About Our Hotel</h2>
   </div>
   <p>
-    NAKSHATRA LAKE VIEW COTTAGE offering a perfect blend of comfort, cleanliness, and affordability. Located in a prime area of Kodaikanal, our hotel is ideal for families,travellers,
-and tourists seeking a peaceful and convenient stay.
-
-We focus on delivering warm hospitality with well-maintained rooms, modern amenities, and prompt service. Our friendly staff ensures that every guest enjoys a safe, comfortable, and memorable experience throughout their stay.
-    <br><br>
+    NAKSHATRA LAKE VIEW COTTAGE offers a perfect blend of comfort, cleanliness,
+    and affordability in Kodaikanal. Ideal for families and tourists with warm
+    hospitality and well-maintained rooms.
   </p>
 </section>
 
-<!-- ROOMS -->
+<!-- ROOMS / GALLERY -->
 <section id="rooms">
   <div class="section-title">
     <h2>Our Rooms</h2>
-  </div>
-
-
-   <section id="gallery">
-  <div class="section-title">
-    
   </div>
 
   <div class="gallery-grid">
@@ -598,301 +436,208 @@ We focus on delivering warm hospitality with well-maintained rooms, modern ameni
     <img src="6.jpg" onclick="openLightbox(this.src)">
     <img src="7.jpg" onclick="openLightbox(this.src)">
   </div>
+
+  <p style="text-align:center;margin-top:20px;font-weight:600;">
+    Spacious Room • WiFi • TV • Water Heater
+  </p>
 </section>
 
-	  
-      <div class="room-content">
-        <h3>Spacious Room • WiFi • TV • Water Heater</h3>
-        
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- TRAVELS -->
-<section id="travels" style="background:#f8f9fa;">
-  <div class="section-title">
-    <h2>Sri Sai shakthi Travels</h2>
-  </div>
-
- <div style="max-width:1000px;margin:auto;text-align:center;">
-
-  <p>
-    <strong>Sri Sai Shakthi Travels</strong> is our in-house travel company providing safe,
-    reliable and comfortable transportation services for hotel guests and external customers.
-    We ensure timely service, experienced drivers and well-maintained vehicles.
-  </p>
-
-  <br><br>
-
-  <p><strong>Travel Services:</strong></p>
-  <p>
-    🚗 Local Sightseeing & Temple Visits<br>
-    🚕 All over Tamil Nadu<br>
-    🚐 Pickup & Drop (Bus Stand / Railway / Airport)<br>
-    🧳 Family & Group Travel
-  </p>
-
-  <h4>For Booking Now</h4>
-
- <a href="tel:+919677823465" class="call-transition">📞 Call Now</a>
-
-<style>
-.call-transition{
-  background:#28a745;
-  color:#fff;
-  padding:15px 32px;
-  font-size:18px;
-  font-weight:600;
-  border-radius:50px;
-  text-decoration:none;
-  display:inline-block;
-
-  /* Smooth transition */
-  transition:
-    background-color 0.3s ease,
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-/* Hover (desktop) */
-.call-transition:hover{
-  background:#218838;
-  transform:translateY(-3px);
-  box-shadow:0 10px 22px rgba(0,0,0,0.25);
-}
-
-/* Tap feedback (mobile) */
-.call-transition:active{
-  transform:scale(0.96);
-  box-shadow:0 5px 12px rgba(0,0,0,0.2);
-}
-</style>
-
-
-
-<!-- GOOGLE MAP LOCATION -->
-<section id="map" style="background:#f8f9fa;padding:70px 12%;">
+<!-- MAP -->
+<section id="map">
   <div class="section-title">
     <h2>Our Location</h2>
   </div>
-
   <div class="map-3d">
-  <iframe
-    src="https://www.google.com/maps?q=Nakshatra+Lake+View+Cottage&output=embed"
-    loading="lazy"
-    allowfullscreen
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-</div>
-
+    <iframe src="https://www.google.com/maps?q=Nakshatra+Lake+View+Cottage&output=embed" loading="lazy"></iframe>
+  </div>
 </section>
 
-  
-  <!-- GOOGLE REVIEW SECTION -->
-<section id="google-reviews" style="background:#f8f9fa;padding:70px 12%;">
-  <div class="section-title">
-    <h2>Google Reviews</h2>
+<!-- Google Reviews Widget Start -->
+<div id="google-reviews-widget"></div>
+<script src="https://widget-provider-url/widget.js"></script>
+<script>
+  initGoogleReviewsWidget({
+    businessName: "Nakshatra Lake View Cottage",
+    placeId: "YOUR_PLACE_ID",
+    container: "#google-reviews-widget"
+  });
+</script>
+<!-- Google Reviews Widget End -->
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <h4>Nakshatra Lake View Cottage</h4>
+    <p>INDIVIDUAL VILLA</p>
   </div>
+  <div>
+    <h4>Quick Links</h4>
+    <p><a href="#about">About</a></p>
+    <p><a href="#rooms">Rooms</a></p>
+    <p><a href="main.html">Travel</a></p>
+  </div>
+  <div>
+    <h4>Contact</h4>
+    <p>📞 <a href="tel:+919025016340">+919025016340</a></p>
+    <p>📧 <a href="Saisharanhomestay19@gmail.com">Saisharanhomestay19@gmail.com</a></p>
+  </div>
+</footer>
 
-  <div style="max-width:1000px;margin:auto;text-align:center;">
-    <!-- Individual Review Cards -->
-    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:30px;">
-      <div style="background:#fff; padding:20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
-        <p>⭐ ⭐ ⭐ ⭐ ⭐</p>
-        <p><em>"Clean rooms, polite staff and excellent location. Highly recommended for families."</em></p>
-        <p><strong>– Google Review</strong></p>
-      </div>
+<div class="copyright">
+  © 2025 NAKSHATRA LAKE VIEW COTTAGE
+</div>
 
-      <div style="background:#fff; padding:20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
-        <p>⭐ ⭐ ⭐ ⭐</p>
-        <p><em>"Affordable price and good service. Rooms are neat and comfortable."</em></p>
-        <p><strong>– Google Review</strong></p>
-      </div>
+<!-- WhatsApp Inline Chat Button -->
+<div id="wa-button" onclick="toggleWA()">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+</div>
 
-      <div style="background:000000; padding:20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
-        <p>⭐ ⭐ ⭐ ⭐ ⭐</p>
-        <p><em>"Amazing hospitality and prompt service. Will visit again."</em></p>
-        <p><strong>– Google Review</strong></p>
-      </div>
+<!-- WhatsApp Inline Chat Box -->
+<div id="wa-chat">
+  <div class="wa-header">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+    <div>
+      <strong>Nakshatra Cottage</strong><br>
+      <span>Typically replies instantly</span>
     </div>
-
-    <br>
-    <a class="btn" href="https://surl.lt/dogjhu" target="_blank">Give Your Feedback</a>
+    <span class="wa-close" onclick="toggleWA()">×</span>
   </div>
-</section>
 
-  
+  <div class="wa-body">
+    <p>👋 Hi! Welcome to Nakshatra Lake View Cottage</p>
+    <p>How can we help you today?</p>
+  </div>
 
-	<script>
-  function revealOnScroll() {
-    const reveals = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
-
-    for (let i = 0; i < reveals.length; i++) {
-      const windowHeight = window.innerHeight;
-      const elementTop = reveals[i].getBoundingClientRect().top;
-      const elementVisible = 120;
-
-      if (elementTop < windowHeight - elementVisible) {
-        reveals[i].classList.add("active");
-      }
-    }
-  }
-
-  window.addEventListener("scroll", revealOnScroll);
-  revealOnScroll(); // initial load
-</script>
-
-
- <script>
-  window.addEventListener("scroll", () => {
-    const header = document.querySelector("header");
-    let scrollPos = window.scrollY;
-
-    header.style.backgroundPositionY = scrollPos * 0.4 + "px";
-  });
-</script>
-
-	
-<a href="https://wa.me/919025016340" 
-   class="whatsapp-float" 
-   target="_blank" 
-   aria-label="Chat on WhatsApp">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-     width="30" alt="WhatsApp">
-
-</a>
-<a href="https://wa.me/919025016340" 
-   class="whatsapp-float" 
-   target="_blank" 
-   aria-label="Chat on WhatsApp">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-     width="30" alt="WhatsApp">
-
-</a>
-	<button id="themeToggle" class="theme-toggle">🌙</button>
-
-	<script>
-  const toggle = document.getElementById("themeToggle");
-
-  // Load saved theme
-  if (localStorage.getItem("theme") === "dark") {
-    document.body.classList.add("dark");
-    toggle.textContent = "☀️";
-  }
-
-  toggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-
-    const isDark = document.body.classList.contains("dark");
-    toggle.textContent = isDark ? "☀️" : "🌙";
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-  });
-</script>
-
-
-
-	<script>
-  window.addEventListener("load", () => {
-    const loader = document.getElementById("page-loader");
-    setTimeout(() => {
-      loader.classList.add("hide");
-    }, 800);
-  });
-</script>
-<div id="lightbox" onclick="closeLightbox()">
-  <span class="lightbox-close">&times;</span>
-  <img id="lightbox-img">
+  <div class="wa-footer">
+  <div class="wa-header">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+  <div>
+    <strong>Nakshatra Cottage</strong><br>
+    <span id="wa-status">Checking status...</span>
+  </div>
+  <span class="wa-close" onclick="toggleWA()">×</span>
 </div>
- <script>
-  function openLightbox(src) {
-    document.getElementById("lightbox-img").src = src;
-    document.getElementById("lightbox").classList.add("active");
-  }
 
-  function closeLightbox() {
-    document.getElementById("lightbox").classList.remove("active");
-  }
+    <a href="https://wa.me/919025016340?text=Hi%20Nakshatra%20Lake%20View%20Cottage,%20I%20would%20like%20to%20know%20about%20room%20availability."
+       target="_blank">
+      Start Chat
+    </a>
+  </div>
+</div>
 
-  // Close on ESC key
-  document.addEventListener("keydown", function(e) {
-    if (e.key === "Escape") {
-      closeLightbox();
-    }
-  });
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="this.style.display='none'" style="display:none;position:fixed;inset:0;background:#000c;z-index:10000;align-items:center;justify-content:center;">
+  <img id="lightbox-img" style="max-width:90%;max-height:85vh;border-radius:14px;">
+</div>
+
+<script>
+function openLightbox(src){
+  document.getElementById("lightbox").style.display="flex";
+  document.getElementById("lightbox-img").src=src;
+}
 </script>
- <script>
-const map = document.querySelector('.map-3d');
-window.addEventListener('scroll', () => {
-  const rect = map.getBoundingClientRect();
-  if(rect.top < window.innerHeight - 120){
-    map.classList.add('show');
+<script>
+function toggleWA(){
+  const chat=document.getElementById("wa-chat");
+  chat.style.display = chat.style.display === "flex" ? "none" : "flex";
+}
+</script>
+<script>
+function updateWAStatus(){
+  const status=document.getElementById("wa-status");
+  const hour=new Date().getHours();
+
+  // OPERATOR WORKING HOURS
+  const start=8;   // 8 AM
+  const end=22;    // 10 PM
+
+  if(hour>=start && hour<end){
+    status.textContent="🟢 Online – Typically replies instantly";
+    status.className="wa-online";
+  }else{
+    status.textContent="🔴 Offline – Leave a message";
+    status.className="wa-offline";
   }
+}
+
+// Run on load & every minute
+updateWAStatus();
+setInterval(updateWAStatus,60000);
+</script>
+<script>
+  // Detect page reload
+  if (performance.getEntriesByType("navigation")[0].type === "reload") {
+    window.location.replace("testing.html"); 
+  }
+</script>
+<script>
+window.addEventListener("load", () => {
+  const loader = document.getElementById("page-loader");
+
+  // Minimum loader time (smooth UX)
+  setTimeout(() => {
+    loader.classList.add("hide");
+  }, 800);
 });
 </script>
-<!-- FOOTER -->
-  <footer>
-    <div>
-      <h4>Nakshatra Lake View Cottage</h4>
-      <p>INDIVIDUAL VILLA</p>
-    </div>
-    <div>
-      <h4>Quick Links</h4>
-      <p><a href="#hero-content">Home</a></p>
-      <p><a href="#about">About</a></p>
-      <p><a href="#rooms">Rooms</a></p>
-      <p><a href="main.html">Travel</a></p>
-      <p><a href="#contact">Contact</a></p>
-	  <p><a href="enquiry.html">Enquiry</a></p>
-      <p><a href="#https://www.google.com/maps?q=Nakshatra+Lake+View+Cottage&output">Location</a></p>
-    </div>
-    <div>
-      <h4>Contact</h4>
-      <p>📞 <a href="tel:+919025016340">+919025016340</a></p>
-      <p> <a href="mailto:Saisharanhomestay19@gmail.com">Saisharanhomestay19@gmail.com</a></p>
-    </div>
-  </footer>
+<canvas id="spiderCanvas"></canvas>
+<script>
+const canvas = document.getElementById("spiderCanvas");
+const ctx = canvas.getContext("2d");
 
-  <div class="copyright">© 2025 NAKSHATRA LAKE VIEW COTTAGE. Designed with ❤</div>
-
-  
-  
-</footer>
-	 <script>
-if (performance.navigation.type === 1) {
-  window.location.href = "index.html";
+let w,h;
+function resize(){
+  w = canvas.width = window.innerWidth;
+  h = canvas.height = window.innerHeight;
 }
+resize();
+window.addEventListener("resize", resize);
+
+let mouse = {x:w/2, y:h/2};
+let points = [];
+
+for(let i=0;i<40;i++){
+  points.push({
+    x:Math.random()*w,
+    y:Math.random()*h,
+    vx:(Math.random()-.5)*0.4,
+    vy:(Math.random()-.5)*0.4
+  });
+}
+
+document.addEventListener("mousemove", e=>{
+  mouse.x = e.clientX;
+  mouse.y = e.clientY;
+});
+
+function draw(){
+  ctx.clearRect(0,0,w,h);
+
+  points.forEach(p=>{
+    p.x += p.vx;
+    p.y += p.vy;
+
+    if(p.x<0||p.x>w) p.vx*=-1;
+    if(p.y<0||p.y>h) p.vy*=-1;
+
+    let dx = p.x - mouse.x;
+    let dy = p.y - mouse.y;
+    let dist = Math.sqrt(dx*dx + dy*dy);
+
+    if(dist < 140){
+      ctx.beginPath();
+      ctx.moveTo(p.x,p.y);
+      ctx.lineTo(mouse.x,mouse.y);
+      ctx.strokeStyle = "rgba(197,157,95,0.25)";
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
+  });
+
+  requestAnimationFrame(draw);
+}
+draw();
 </script>
 
 </body>
 </html>
-
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
